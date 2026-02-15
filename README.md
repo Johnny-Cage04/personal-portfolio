@@ -9,7 +9,7 @@ The goal is to demonstrate basic web development concepts and create a foundatio
 ## ⚙️ Setup Instructions
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/personal-portfolio.git
+   git clone https://github.com/Johnny-Cage04/personal-portfolio.git
 
 2. Navigate into the project folder: cd personal-portfolio
 
@@ -28,13 +28,13 @@ The goal is to demonstrate basic web development concepts and create a foundatio
 
 ## 🖼️ Visual Documentation
 ### Homepage 
-![Homepage Screenshot](../images/screenshot-home.png)
+![Homepage Screenshot](images/screenshot-home.png)
 ### About Section 
-![About Screenshot](../images/screenshot-about.png) 
+![About Screenshot](images/screenshot-about.png) 
 ### Skills Section 
-![Skills Screenshot](../images/screenshot-skills.png) 
+![Skills Screenshot](images/screenshot-skills.png) 
 ### Contact Form 
-![Contact Screenshot](../images/screenshot-contact.png)
+![Contact Screenshot](images/screenshot-contact.png)
 
 
 ## 📖 Technical Details
