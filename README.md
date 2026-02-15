@@ -23,8 +23,6 @@ The goal is to demonstrate basic web development concepts and create a foundatio
 
 3. README.md → Documentation file.
 
-4. requirements.txt → Optional dependencies (not needed for plain HTML/CSS).
-
 
 ## 🖼️ Visual Documentation
 ### Homepage 
