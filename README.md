@@ -119,6 +119,7 @@ Interactive elements: Transitions, hover effects, smooth scrolling.
 
 Accessibility: Alt text for images, semantic tags for screen readers.
 
+
 ## Testing Evidence
 1. Navigation links scroll smoothly to correct sections.
 
@@ -129,3 +130,98 @@ Accessibility: Alt text for images, semantic tags for screen readers.
 4. Responsive layout verified in Chrome, Edge, and Firefox.
 
 5. HTML validated successfully with W3C Validator.
+
+
+## Week 3 
+## JavaScript Concepts Used
+1. Client-side scripting for interactivity.
+
+2. Functions & Event Handling (`toggleDarkMode`, `validateForm`, `addTask`).
+
+3. DOM Manipulation (footer year, form feedback, to‑do list items).
+
+4. Event Listeners (click, submit).
+
+5. Form Validation with real-time feedback.
+
+6. Local Storage for dark mode preference.
+
+
+## Interactive Features Implemented
+1. Dark/Light Mode Toggle: Button switches themes, preference saved in localStorage.
+
+2. Dynamic Footer Year: Footer year updates automatically using new `Date().getFullYear()`.
+
+3. Form Validation: Validates email format and message length, shows error/success messages.
+
+4. To‑Do List: Add tasks via input, tasks appear instantly, clicking removes them.
+
+
+## Code Structure (Updated)
+1. `index.html` → Main webpage with About, Skills, Contact, To‑Do List.
+
+2. `style.css` → Styling including dark mode, responsiveness, to‑do list styles.
+
+3. `script.js` → JavaScript interactivity (dark mode, form validation, to‑do list, footer year).
+
+4. `images/` → Profile photo and screenshots.
+
+5. `README.md` → Documentation with Week 1, Week 2, Week 3 updates.
+
+
+## Visual Documentation
+### Dark Mode Toggle
+![Dark Mode Toggle](images/screenshot-DarkMode.png)
+### Footer Year
+![Footer Year](images/screenshot-FooterYear.png)
+### Form Validation
+![Form Validation](images/screenshot-FormValidation1.png)
+![Form Validation](images/screenshot-FormValidation2.png)
+### To-Do List
+![To-Do List](images/screenshot-ToDoList.png)
+
+
+## Technical Details
+1. Dynamic Footer Year:
+   ```bash
+   document.getElementById("year").textContent = new Date().getFullYear();
+
+2. Dark Mode Toggle:
+   ```bash
+   function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
+   }
+
+3. Form Validation:
+   ```bash
+   if (!email.includes("@")) {
+     showError("Please enter a valid email address");
+   }
+   if (message.length < 10) {
+     showError("Message must be at least 10 characters");
+   }
+
+4. To-Do List:
+   ```bash
+   function addTask() {
+    const taskInput = document.getElementById("taskInput");
+    const taskList = document.getElementById("taskList");
+
+    if (taskInput.value.trim() !== "") {
+       const li = document.createElement("li");
+       li.textContent = taskInput.value;
+       li.onclick = () => li.remove();
+       taskList.appendChild(li);
+       taskInput.value = "";
+       }
+   }
+
+## Testing Evidence
+1. Form Validation: Invalid email → error; short message → error; valid input → success.
+
+2. Dark Mode: Toggle button switches theme; preference persists after refresh.
+
+3. Footer Year: Displays current year automatically.
+
+4. To‑Do List: Add task → appears; click task → removed.

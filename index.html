@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
-
+  <script src="script.js" defer></script> <!-- defer ensures JS loads after HTML -->
 </head>
 <body>
+  <!-- Dark Mode Toggle -->
+  <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+
   <!-- Header & Navigation -->
   <header>
     <h1>C Rahul Anand Rao</h1>
@@ -20,6 +23,14 @@
 
   <!-- Main Content -->
   <main>
+    <!-- To-Do List Section -->
+    <section id="todo">
+      <h2>My To‑Do List</h2>
+      <input type="text" id="taskInput" placeholder="Enter a task">
+      <button onclick="addTask()">Add Task</button>
+      <ul id="taskList"></ul>
+    </section>
+
     <!-- About Section -->
     <section id="about">
       <h2>About Me</h2>
@@ -43,7 +54,7 @@
     <!-- Contact Section -->
     <section id="contact">
       <h2>Contact Me</h2>
-      <form action="#" method="post">
+      <form onsubmit="validateForm(event)">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
@@ -54,13 +65,16 @@
         <textarea id="message" name="message" rows="5" required></textarea>
 
         <button type="submit">Send Message</button>
+        <p id="form-feedback"></p>
       </form>
     </section>
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2026 Your Name | <a href="https://www.linkedin.com/in/rahul-anand-rao-chanapati/" target="_blank">LinkedIn</a> </p>
+    <p>&copy; <span id="year"></span> C Rahul Anand Rao | 
+      <a href="https://www.linkedin.com/in/rahul-anand-rao-chanapati/" target="_blank">LinkedIn</a>
+    </p>
   </footer>
 </body>
 </html>
